@@ -26,7 +26,6 @@ target_link_libraries(${target_project} PUBLIC
     pico_cyw43_arch_none
     tinyusb_host
     tinyusb_board
-    ring_buffer_lib
 )
 
 # Create map/bin/hex file etc.
