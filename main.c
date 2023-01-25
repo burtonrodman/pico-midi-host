@@ -39,7 +39,7 @@ int main() {
     board_init();
     stdio_init_all();
 
-    printf("Pico MIDI Host to MIDI UART Adapter\r\n");
+    printf("Pico MIDI Host\r\n");
     tusb_init();
 
 
@@ -115,11 +115,6 @@ void tuh_midi_rx_cb(uint8_t dev_addr, uint32_t num_packets)
                         printf("%02x ", buffer[i]);
                     }
                     printf("\n");
-
-                    // uint8_t npushed = midi_uart_write_tx_buffer(midi_uart_instance,buffer,bytes_read);
-                    // if (npushed != bytes_read) {
-                    //     TU_LOG1("Warning: Dropped %lu bytes sending to UART MIDI Out\r\n", bytes_read - npushed);
-                    // }
                 }
             }
         }
